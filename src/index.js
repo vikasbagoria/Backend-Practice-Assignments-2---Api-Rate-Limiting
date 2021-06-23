@@ -18,10 +18,10 @@ app.get('/api/posts', (req, res) => {
     var max =req.query.max;
     var limit =0;
 
-    if(max>data.length){
-        limit = data.slice(0, 9) 
+    if(max>data.length ){
+        limit = data.slice(0, 10) 
     }else{
-   limit = data.slice(0,max || 9)
+   limit = data.slice(0,max || 10)
     }
     // console.log(max);
     res.status(200).send(limit);
